@@ -1,45 +1,28 @@
-import { useState } from 'react'
-import logo from './logo.svg'
-import './App.css'
+import { useEffect, useState } from 'react';
 
-function App() {
-  const [count, setCount] = useState(0)
+import { ExampleComponent1 } from './components/ExampleComponent1';
+import { ExampleComponent2 } from './components/ExampleComponent2';
+import { ExampleComponent3 } from './components/ExampleComponent3';
+
+export const App = () => {
+  const [css, setCss] = useState<string | null>(null);
+
+  useEffect(() => {
+    const getCss = async () => {
+      return await fetch('/main.css')
+        .then(res => res.text())
+        .then(res => setCss(res));
+    };
+
+    getCss();
+  }, []);
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React!</p>
-        <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
-        </p>
-        <p>
-          Edit <code>App.tsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {' | '}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
-      </header>
+    <div>
+      <ExampleComponent1 />
+      <ExampleComponent2 />
+      <ExampleComponent3 />
+      <div>{css}</div>
     </div>
-  )
-}
-
-export default App
+  );
+};
