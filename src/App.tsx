@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 
-import { ExampleComponent1 } from './components/ExampleComponent1';
-import { ExampleComponent2 } from './components/ExampleComponent2';
-import { ExampleComponent3 } from './components/ExampleComponent3';
+import Component1 from './components/Example1';
+import Component2 from './components/Example2';
+import Component3 from './components/Example3';
 
 export const App = () => {
   const [css, setCss] = useState<string | null>(null);
@@ -19,9 +19,9 @@ export const App = () => {
 
   return (
     <div>
-      <ExampleComponent1 />
-      <ExampleComponent2 />
-      <ExampleComponent3 />
+      <Component1 />
+      <Component2 />
+      <Component3 />
       <div>{css}</div>
     </div>
   );

@@ -1,12 +1,6 @@
 import { style, styleVariants } from '@vanilla-extract/css';
 import { recipe } from '@vanilla-extract/recipes';
 
-export const exampleStyle = style({
-  backgroundColor: 'blue',
-  color: 'white',
-  padding: '1.5rem',
-});
-
 const colors = {
   background: '#fefefe',
   text: '#333',
