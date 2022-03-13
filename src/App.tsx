@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import Component1 from './components/Example1';
 import Component2 from './components/Example2';
 import Component3 from './components/Example3';
+import './styles/style.css';
 
 export const App = () => {
   const [css, setCss] = useState<string | null>(null);

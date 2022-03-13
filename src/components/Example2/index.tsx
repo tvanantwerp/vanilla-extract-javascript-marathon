@@ -1,4 +1,4 @@
-import { sprinkles } from '../../sprinkles.css';
+import { sprinkles } from '../../sprinkles/sprinkles.css';
 
 export default function Example2() {
   return (
