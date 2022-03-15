@@ -17,3 +17,11 @@ export const theme = createTheme(vars, {
   white: '#ffffff',
   primary: '#rgb(198, 251, 108)',
 });
+
+export const darkModeTheme = createTheme(vars, {
+  white: '#151515',
+  lightGray: '#rgb(91, 90, 87)',
+  darkGray: 'rgb(247, 245, 239)',
+  black: '#ffffff',
+  primary: '#rgb(198, 251, 108)',
+});

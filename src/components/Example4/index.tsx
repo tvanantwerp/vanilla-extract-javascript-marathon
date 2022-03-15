@@ -1,8 +1,8 @@
-import { cardStyles } from './style.css';
+import { card } from './style.css';
 
 export default function Card() {
   return (
-    <div className={cardStyles}>
+    <div className={card}>
       <p>test test test</p>
     </div>
   );
