@@ -27,12 +27,13 @@ const space = {
 const spaceProperties = defineProperties({
   conditions: {
     mobile: {},
-    desktop: { '@media': 'screen and (min-width: 1024px' },
+    desktop: { '@media': 'screen and (min-width: 1024px)' },
   },
   defaultCondition: 'mobile',
   properties: {
     margin: space,
     padding: space,
+    borderRadius: space,
   },
 });
 
