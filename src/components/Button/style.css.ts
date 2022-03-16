@@ -1,7 +1,6 @@
-import { style } from '@vanilla-extract/css';
+import { style, styleVariants } from '@vanilla-extract/css';
 
-export const buttonStyle = style({
-  backgroundColor: 'rgb(100, 70, 240)',
+const baseButtonStyle = style({
   color: 'white',
   cursor: 'pointer',
   borderRadius: '4px',
@@ -9,7 +8,25 @@ export const buttonStyle = style({
   fontSize: '24px',
   padding: '18px;',
   transition: 'background-color 0.2s ease-in-out',
-  ':hover': {
-    backgroundColor: 'rgb(60, 70, 230)',
-  },
+});
+
+export const buttonStyle = styleVariants({
+  purple: [
+    baseButtonStyle,
+    {
+      backgroundColor: 'rgb(100, 70, 240)',
+      ':hover': {
+        backgroundColor: 'rgb(60, 70, 230)',
+      },
+    },
+  ],
+  red: [
+    baseButtonStyle,
+    {
+      backgroundColor: 'rgb(240, 70, 100)',
+      ':hover': {
+        backgroundColor: 'rgb(230, 70, 60)',
+      },
+    },
+  ],
 });
