@@ -23,7 +23,9 @@ export const buttonStyle = styleVariants({
     sprinkles({
       backgroundColor: {
         lightMode: 'primary100',
+        lightHover: 'primary200',
         darkMode: 'secondary100',
+        darkHover: 'secondary200',
       },
       color: 'background',
     }),

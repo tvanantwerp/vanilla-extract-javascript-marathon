@@ -8,6 +8,11 @@ const colorProperties = defineProperties({
     darkMode: {
       '@media': '(prefers-color-scheme: dark)',
     },
+    lightHover: { selector: '&:hover' },
+    darkHover: {
+      '@media': '(prefers-color-scheme: dark)',
+      selector: '&:hover',
+    },
   },
   defaultCondition: ['lightMode', 'darkMode'],
   properties: {
