@@ -9,7 +9,7 @@ const colorProperties = defineProperties({
       '@media': '(prefers-color-scheme: dark)',
     },
   },
-  defaultCondition: false,
+  defaultCondition: ['lightMode', 'darkMode'],
   properties: {
     backgroundColor: vars.colors,
     color: vars.colors,

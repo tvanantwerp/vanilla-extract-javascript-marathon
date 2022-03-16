@@ -20,12 +20,13 @@ const baseButtonStyle = style([
 export const buttonStyle = styleVariants({
   purple: [
     baseButtonStyle,
-    {
-      backgroundColor: vars.colors.primary100,
-      ':hover': {
-        backgroundColor: vars.colors.primary200,
+    sprinkles({
+      backgroundColor: {
+        lightMode: 'primary100',
+        darkMode: 'secondary100',
       },
-    },
+      color: 'background',
+    }),
   ],
   red: [
     baseButtonStyle,
