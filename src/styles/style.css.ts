@@ -8,8 +8,8 @@ globalStyle('html, body', {
 });
 
 globalStyle('body', {
-  backgroundColor: vars.background,
-  color: vars.color,
+  backgroundColor: vars.colors.background,
+  color: vars.colors.color,
   fontFamily: 'sans-serif',
   padding: '1rem;',
 });
