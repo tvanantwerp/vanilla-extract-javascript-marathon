@@ -1,11 +1,13 @@
 import { useState } from 'react';
 
 import Button from './components/Button';
+import './styles/style.css';
+import { darkTheme, lightTheme } from './themes/theme.css';
 
 export const App = () => {
   const [counts, setCounts] = useState({ count1: 0, count2: 0 });
   return (
-    <div>
+    <div className={darkTheme}>
       <Button
         color="purple"
         onClick={() =>

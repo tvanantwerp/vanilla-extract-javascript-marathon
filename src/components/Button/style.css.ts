@@ -1,5 +1,7 @@
 import { style, styleVariants } from '@vanilla-extract/css';
 
+import { vars } from '../../themes/theme.css';
+
 const baseButtonStyle = style({
   color: 'white',
   cursor: 'pointer',
@@ -14,18 +16,18 @@ export const buttonStyle = styleVariants({
   purple: [
     baseButtonStyle,
     {
-      backgroundColor: 'rgb(100, 70, 240)',
+      backgroundColor: vars.primary100,
       ':hover': {
-        backgroundColor: 'rgb(60, 70, 230)',
+        backgroundColor: vars.primary200,
       },
     },
   ],
   red: [
     baseButtonStyle,
     {
-      backgroundColor: 'rgb(240, 70, 100)',
+      backgroundColor: vars.secondary100,
       ':hover': {
-        backgroundColor: 'rgb(230, 70, 60)',
+        backgroundColor: vars.secondary200,
       },
     },
   ],
